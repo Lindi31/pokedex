@@ -1,0 +1,78 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.flex-container {
+  display: flex;
+}
+/*
+.pokemon-card {
+  width: 38%;
+  height: 38%;
+  max-width: 400px; 
+  max-height: 400px; 
+  margin: auto; 
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+*/
+
+.left-panel {
+  width: 50%;
+  position: fixed;
+  top: 5;
+  bottom: 5;
+  left: 0;
+  overflow-y: auto; /* Ermöglicht das Scrollen, falls der Inhalt zu lang ist */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.right-panel {
+  width: 50%;
+  margin-left: 50%; /* Verschiebt den rechten Bereich um die Breite des linken Bereichs */
+}
+
+.App {
+  text-align: center;
+  background-color:rgb(219 234 254);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
