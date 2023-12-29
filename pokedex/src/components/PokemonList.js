@@ -28,8 +28,8 @@ const PokemonList = ({ onPokemonSelect }) => {
 
   return (
     <div>
-      <SearchBar onSearch={handleSearch} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
+      <SearchBar  className="pb-5" onSearch={handleSearch} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-5">
         {filteredPokemonList.map(pokemon => (
           <div 
             key={pokemon.name} 

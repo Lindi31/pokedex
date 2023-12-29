@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
       placeholder="Search for Pokémon..."
       value={searchTerm}
       onChange={handleChange}
-      className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-purple-500"
+      className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-purple-500 px-3"
     />
   );
 };
