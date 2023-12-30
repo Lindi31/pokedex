@@ -1,5 +1,8 @@
 
-# React Pokémon App
+# React PokéDex App
+
+![Screen](/public/beispiel.png)
+
 
 ## Überblick
 
