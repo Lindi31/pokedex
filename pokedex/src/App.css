@@ -34,7 +34,8 @@
 
 .right-panel {
   width: 50%;
-  margin-left: 50%; /* Verschiebt den rechten Bereich um die Breite des linken Bereichs */
+  margin-left: 50%;
+  margin-top: 5;/* Verschiebt den rechten Bereich um die Breite des linken Bereichs */
 }
 
 .App {

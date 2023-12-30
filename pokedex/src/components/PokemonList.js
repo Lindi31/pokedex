@@ -22,6 +22,8 @@ const PokemonList = ({ onPokemonSelect }) => {
   };
 
   const handlePokemonClick = (url) => {
+    console.log("Ausgewähltes Pokémon URL: ", url);
+    console.log("Aktuell ausgewähltes Pokémon URL: ", selectedPokemonUrl);
     setSelectedPokemonUrl(url);
     onPokemonSelect(url);
   };
@@ -29,12 +31,12 @@ const PokemonList = ({ onPokemonSelect }) => {
   return (
     <div>
       <SearchBar  className="pb-5" onSearch={handleSearch} />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-3">
         {filteredPokemonList.map(pokemon => (
           <div 
             key={pokemon.name} 
             onClick={() => handlePokemonClick(pokemon.url)}
-            className={`bg-white rounded-lg shadow-md p-4 hover:shadow-lg cursor-pointer transition duration-300 flex items-center space-x-4 ${selectedPokemonUrl === pokemon.url ? 'bg-blue-100' : ''}`}
+            className={`bg-white rounded-lg shadow-md p-4 hover:shadow-xl cursor-pointer transition duration-300 flex items-center space-x-4 ${selectedPokemonUrl === pokemon.url ? 'bg-blue-100' : ''}`}
           >
             <img src={pokemon.imageUrl} alt={pokemon.name} className="w-12 h-12 object-contain"/>
             <span className="capitalize">{pokemon.name}</span>

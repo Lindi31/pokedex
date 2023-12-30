@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchPokemonDetails } from '../services/pokeapi';
 import { motion } from 'framer-motion';
+import BorderedText from './BorderedText';
 
 const Pokemon = ({ pokemonUrl }) => {
   const [details, setDetails] = useState(null);
@@ -32,7 +33,7 @@ const Pokemon = ({ pokemonUrl }) => {
     >
     <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden my-4">
       <div className="p-4">
-        <div className="text-center mb-4">
+        <div className="text-center mb-4"> 
           <img 
             src={details.imageUrl} 
             alt={details.name} 
@@ -43,18 +44,21 @@ const Pokemon = ({ pokemonUrl }) => {
 
         <div className="text-gray-700">
           <div className="mb-2">
-            <h3 className="text-lg font-bold py-3">Eigenschaften</h3>
-            <p><strong>Typen:</strong> {details.types.map(type => type.type.name).join(', ')}</p>
-            <p><strong>Höhe:</strong> {details.height / 10} m</p>
-            <p><strong>Gewicht:</strong> {details.weight / 10} kg</p>
-            <p><strong>Base Fähigkeiten:</strong> {details.abilities.map(ability => ability.ability.name).join(', ')}</p>
-            <p><strong>Base EXP:</strong> {details.base_experience}</p>
+            <h3 className="text-lg font-bold py-3"><BorderedText text="Eigenschaften"/></h3>
+            <div className=' content-center items-center self-center'>
+              <p><strong>Typ:</strong> {details.types.map(type => type.type.name).join(', ')}</p>
+              <p><strong>Größe:</strong> {details.height / 10} m</p>
+              <p><strong>Gewicht:</strong> {details.weight / 10} kg</p>
+              <p><strong>Base Fähigkeiten:</strong> {details.abilities.map(ability => ability.ability.name).join(', ')}</p>
+              <p><strong>Base EXP:</strong> {details.base_experience}</p>
+            </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-bold py-3">Stats</h3>
+            <h3 className="text-lg font-bold py-3"><BorderedText text="Stats"/></h3>
             <ul className="list-disc pl-5">
               {details.stats.map(stat => (
+                
                 <li key={stat.stat.name} className="capitalize">
                   {stat.stat.name}: {stat.base_stat}
                 </li>
