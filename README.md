@@ -1,7 +1,7 @@
 
 # React PokéDex App
 
-![Screen](/public/beispiel.png)
+![Screen](/pokedex/public/beispiel.png)
 
 
 ## Überblick
